@@ -8,12 +8,16 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatCardModule} from '@angular/material/card';
 import { FormsModule } from '@angular/forms';
 import { EditDialogComponent } from './edit-dialog/edit-dialog.component';
+import { OneTaskEditorComponent } from './one-task-editor/one-task-editor.component';
+import { AllTasksComponent } from './all-tasks/all-tasks.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    EditDialogComponent
+    EditDialogComponent,
+    OneTaskEditorComponent,
+    AllTasksComponent
   ],
   imports: [
     BrowserModule,
