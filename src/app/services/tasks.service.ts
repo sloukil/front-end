@@ -16,7 +16,7 @@ export class TasksService {
     return this.http.get<Task[]>(`${this.apiUrl}/taches`);
   }
 
-  getOneTasl(id: number){
+  getOneTask(id: number){
     return this.http.get<Task>(`${this.apiUrl}/taches/${id}`);
   }
 

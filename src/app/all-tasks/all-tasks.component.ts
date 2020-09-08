@@ -3,6 +3,7 @@ import { TasksService } from '../services/tasks.service';
 import { Task } from '../data/task';
 import { MatDialog } from '@angular/material/dialog';
 import { EditDialogComponent } from '../edit-dialog/edit-dialog.component';
+import { Router } from '@angular/router';
 @Component({
   selector: 'app-alltasks',
   templateUrl: './all-tasks.component.html',
@@ -17,7 +18,7 @@ export class AllTasksComponent implements OnInit{
   title = 'my-app';
 
   @ViewChild('myDiv') myDiv: ElementRef;
-  constructor (private ts:TasksService, public dialog: MatDialog){}
+  constructor (private ts:TasksService, public dialog: MatDialog, private router: Router){}
 
   ngOnInit(){
     console.log(this.ts);
@@ -44,4 +45,8 @@ export class AllTasksComponent implements OnInit{
       data: this.allTasks[i].id
     });
 }
+navigateToTask(i : number){
+  this.router.navigate(['/onetask/'+this.allTasks[i].id]);
+}
+
 }

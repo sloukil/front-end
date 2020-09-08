@@ -1,1 +1,22 @@
-<p>one-task-editor works!</p>
+<mat-card class="example-card" >
+    <mat-card-header>
+    
+      <mat-card-title>Task ID</mat-card-title>
+      <mat-card-subtitle>{{currentTask.id}}</mat-card-subtitle>
+    </mat-card-header>
+   
+    <mat-card-content>
+      <p>
+          <textarea [(ngModel)]="desc">
+        {{currentTask.description}}
+    </textarea>
+        </p>
+  
+        
+    </mat-card-content>
+    <mat-card-actions style="text-align: center;">
+      <button mat-button (click)= "editTask()"  >Edit</button>
+      <button mat-button (click)= "deleteTask()" >Delete</button>
+    </mat-card-actions>
+    <br><br>
+  </mat-card>

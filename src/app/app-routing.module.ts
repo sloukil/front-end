@@ -5,7 +5,7 @@ import { OneTaskEditorComponent } from './one-task-editor/one-task-editor.compon
 import { AllTasksComponent } from './all-tasks/all-tasks.component';
 const routes: Routes = [
   {
-    path : 'onetask',
+    path : 'onetask/:id',
     component: OneTaskEditorComponent
   },
   {

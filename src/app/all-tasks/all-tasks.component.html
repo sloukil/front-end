@@ -11,7 +11,7 @@
   <mat-card class="example-card" *ngFor="let t of allTasks; let i = index">
     <mat-card-header>
       <div mat-card-avatar class="example-header-image"></div>
-      <mat-card-title>Task ID</mat-card-title>
+      <mat-card-title> <button (click)="navigateToTask(i)">Task ID</button></mat-card-title>
       <mat-card-subtitle>{{t.id}}</mat-card-subtitle>
     </mat-card-header>
    
